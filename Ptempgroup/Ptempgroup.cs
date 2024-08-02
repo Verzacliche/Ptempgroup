@@ -19,7 +19,7 @@ namespace PTempGroup
 
         public override string Name => "Persistent TempGroup";
         public override string Author => "Verza";
-        public override string Description => "Records Tempgroups.";
+        public override string Description => "Enhances Tempgroup command by allowing persistent timers across server restarts.";
         public override Version Version => new Version(1, 0, 0);
 
         public PTempGroup(Main game) : base(game)
