@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>VIP_assigner</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OTAPI.Upcoming" Version="3.1.20" />
+    <PackageReference Include="TSAPI" Version="5.2.0" />
+    <PackageReference Include="TSAPI.Public" Version="1.0.18" />
+    <PackageReference Include="TShock" Version="5.2.0" />
+  </ItemGroup>
+
+</Project>
