@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -82,7 +82,7 @@ namespace PTempGroup
                 TSPlayer target = players[0];
                 originalGroup = target.Group.Name;
                 // Set the temporary group
-                TShockAPI.Commands.HandleCommand(TSPlayer.Server, $"/user group {target.Name} {groupName}");
+                TShockAPI.Commands.HandleCommand(TSPlayer.Server, $"/user group \"{playerName}\" {groupName}");
             }
             else
             {
@@ -181,7 +181,7 @@ namespace PTempGroup
 
                 if (DateTime.UtcNow >= expiryTime)
                 {
-                    TShockAPI.Commands.HandleCommand(TSPlayer.Server, $"/user group {playerName} {originalGroup}");
+                    TShockAPI.Commands.HandleCommand(TSPlayer.Server, $"/user group \"{playerName}\" {originalGroup}");
                     TShock.Log.Info($"Reverted {playerName} to {originalGroup} after expiration.");
                 }
                 else
@@ -197,7 +197,7 @@ namespace PTempGroup
             TShock.Log.Info($"Starting timer for {playerName} with delay {delay} seconds.");
             await Task.Delay(delay * 1000);
 
-            TShockAPI.Commands.HandleCommand(TSPlayer.Server, $"/user group {playerName} {originalGroup}");
+            TShockAPI.Commands.HandleCommand(TSPlayer.Server, $"/user group \"{playerName}\" {originalGroup}");
             TShock.Log.Info($"Reverted {playerName} to {originalGroup} after expiration.");
 
             // Remove the timer entry
